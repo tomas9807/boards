@@ -11,3 +11,8 @@ def index(request):
 def board_topics_all(request,pk=None):
     board = get_object_or_404(Board,pk=pk)
     return render(request,'topics.html',{'board':board})
+
+def board_topics_new(request,pk=None):
+    board = get_object_or_404(Board,pk=pk)
+
+    return render(request,'new_topic.html',{'board':board})

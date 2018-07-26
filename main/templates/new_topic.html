@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="{% url 'boards:index' %}">Boards</a></li>
+          <li class="breadcrumb-item"><a href="{% url 'boards:' %}">{{board.name}}</a></li>
+          <li class="breadcrumb-item active" aria-current="page">New Topic</li>
+        </ol>
+      </nav>
+
+
+{% endblock content %}
