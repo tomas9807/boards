@@ -1,0 +1,29 @@
+<table class="table table-striped table-bordered table-dark  table-hover rounded" >
+        <thead>
+          <tr>
+            <th scope="col">Boards</th>
+            <th scope="col">Posts</th>
+            <th scope="col">Topics</th>
+            <th scope="col">Last_Post</th>
+          </tr>
+        </thead>
+        <tbody>
+                {% for board in board_list %}
+                <tr>
+                        
+                        <td><a href="{% url 'boards:topics_all' board.pk %}">{{board.name}}</a><br> <small style='color:#888'>{{board.description}}</small></td>
+                        <td>0</td>
+                        <td>0</td>
+                         <td></td>
+                  
+
+               
+
+                
+            </tr>
+                {% endfor %}
+
+        </tbody>
+      </table>
+
+     
